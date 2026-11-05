@@ -52,7 +52,7 @@ namespace baiTapLonBanh
             ThemSanPham(ds, "19", "Bánh Tart Trứng", 22000m, "image/SanPham/banhtart_SP.jpg", "Bánh Tươi", new DateTime(2025, 7, 9));
             ThemSanPham(ds, "20", "Bánh Cookie Bơ", 18000m, "image/SanPham/banhcookie_SP.jpg", "Bánh Tươi", new DateTime(2025, 8, 14));
             ThemSanPham(ds, "21", "Bánh Macaron", 15000m, "image/SanPham/banhmacaron_SP.jpg", "Bánh Tươi", new DateTime(2025, 9, 1));
-            ThemSanPham(ds, "22", "Bánh Flan Caramel", 20000m, "image/SanPham/bànhlan_SP.jpg", "Bánh Tươi", new DateTime(2025, 9, 18));
+            ThemSanPham(ds, "22", "Bánh Flan Caramel", 20000m, "image/SanPham/banhflan_SP.jfif", "Bánh Tươi", new DateTime(2025, 9, 18));
 
             
             ThemSanPham(ds, "23", "Bánh Mì Hấp Xúc Xích Phô Mai", 25000m, "image/SanPham/hotdog_TC.jpg", "Bánh Mì", new DateTime(2025, 2, 3));

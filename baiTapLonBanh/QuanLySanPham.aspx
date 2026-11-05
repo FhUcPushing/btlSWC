@@ -143,12 +143,19 @@
         </div>
 
         <div class="admin-actions">
-            <a href="QuanTri.aspx"
-               class="admin-detail-link">
-                <i class="fa-solid fa-arrow-left"></i>
-                Quay lại quản trị
-            </a>
-        </div>
+    <a href="QuanLyNguoiDung.aspx"
+       class="admin-detail-link">
+        <i class="fa-solid fa-users"></i>
+        Quản lý thành viên
+    </a>
+
+    <a href="QuanTri.aspx"
+       class="admin-detail-link">
+        <i class="fa-solid fa-clipboard-list"></i>
+        Quản lý đơn hàng
+    </a>
+
+</div>
 
     </div>
         </main>
