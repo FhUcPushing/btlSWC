@@ -1,0 +1,665 @@
+﻿
+.tai-khoan-page {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: #35282c;
+}
+
+    .tai-khoan-page h1 {
+        position: relative;
+        margin: 0 0 22px;
+        padding-bottom: 12px;
+        color: #b0306a;
+        font-size: 26px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+        .tai-khoan-page h1::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 48px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #d9457c, #ffdbe8);
+            content: "";
+            transform: translateX(-50%);
+        }
+
+  
+    .tai-khoan-page .tk-luoi {
+        display: grid;
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 20px;
+        align-items: start;
+    }
+
+  
+    .tai-khoan-page .tk-menu {
+        position: sticky;
+        top: 84px;
+        padding: 14px;
+        border: 1px solid #f3d4e0;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 4px 16px rgba(217, 69, 124, 0.07);
+    }
+
+    .tai-khoan-page .tk-chao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        margin-bottom: 10px;
+        padding-bottom: 12px;
+        border-bottom: 1px dashed #f3d4e0;
+        text-align: center;
+    }
+
+        .tai-khoan-page .tk-chao i {
+            color: #d9457c;
+            font-size: 38px;
+        }
+
+        .tai-khoan-page .tk-chao strong {
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .tai-khoan-page .tk-chao span {
+            color: #8a6b78;
+            font-size: 13px;
+            overflow-wrap: anywhere;
+        }
+
+    .tai-khoan-page .tk-menu a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 4px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        color: #6b4a58;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 0.2s, color 0.2s;
+    }
+
+        .tai-khoan-page .tk-menu a:hover {
+            background: #fff1f6;
+            color: #b0306a;
+        }
+
+        .tai-khoan-page .tk-menu a.dang-chon {
+            background: #d9457c;
+            color: #fff;
+        }
+
+        .tai-khoan-page .tk-menu a.tk-dang-xuat {
+            margin: 8px 0 0;
+            border: 1px solid #f0bad0;
+        }
+
+   
+    .tai-khoan-page .tk-khoi {
+        margin-bottom: 16px;
+        padding: 20px 22px;
+        border: 1px solid #f3d4e0;
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 4px 16px rgba(217, 69, 124, 0.07);
+    }
+
+        .tai-khoan-page .tk-khoi h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 14px;
+            color: #b0306a;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+   
+    .tai-khoan-page .tk-hang {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 16px;
+    }
+
+        .tai-khoan-page .tk-hang.tk-ba {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    .tai-khoan-page .tk-nhan {
+        display: block;
+        margin: 0 0 5px;
+        color: #6b4a58;
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .tai-khoan-page .tk-o {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 9px 13px;
+        border: 1.5px solid #f0bad0;
+        border-radius: 10px;
+        outline: none;
+        background: #fffafd;
+        font: inherit;
+        font-size: 14px;
+    }
+
+        .tai-khoan-page .tk-o:focus {
+            border-color: #d9457c;
+            box-shadow: 0 0 0 3px rgba(217, 69, 124, 0.12);
+        }
+
+    .tai-khoan-page small {
+        display: block;
+        margin-top: 6px;
+        color: #8a6b78;
+        font-size: 12px;
+    }
+
+    .tai-khoan-page .tk-tieu-de-nho {
+        margin: 16px 0 8px;
+        padding-top: 14px;
+        border-top: 1px dashed #f3d4e0;
+        color: #b0306a;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+        .tai-khoan-page .tk-tieu-de-nho span {
+            color: #8a6b78;
+            font-size: 12px;
+            font-weight: 600;
+        }
+   
+    .tai-khoan-page .tk-o.tk-o-loi {
+        border-color: #e53935;
+        background: #fff6f6;
+    }
+
+        .tai-khoan-page .tk-o.tk-o-loi:focus {
+            box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.12);
+        }
+
+    .tai-khoan-page .tk-loi {
+        display: block;
+        margin-top: 5px;
+        color: #e53935;
+        font-size: 12.5px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+        .tai-khoan-page .tk-loi:empty {
+            display: none;
+        }
+    
+    .tai-khoan-page .tk-nut {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+        padding: 10px 28px;
+        border: 1px solid #d9457c;
+        border-radius: 24px;
+        background: #d9457c;
+        color: #fff;
+        font: inherit;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+        .tai-khoan-page .tk-nut:hover {
+            transform: translateY(-2px);
+            background: #b0306a;
+            border-color: #b0306a;
+            color: #fff;
+        }
+
+        .tai-khoan-page .tk-nut.tk-vien {
+            background: #fff;
+            color: #d9457c;
+        }
+
+            .tai-khoan-page .tk-nut.tk-vien:hover {
+                background: #fff1f6;
+                color: #b0306a;
+            }
+
+    
+    .tai-khoan-page .tk-thong-bao {
+        margin-bottom: 12px;
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+        .tai-khoan-page .tk-thong-bao.ok {
+            background: #eaf8f0;
+            color: #1e7e4a;
+        }
+
+        .tai-khoan-page .tk-thong-bao.loi {
+            background: #fff1f6;
+            color: #b0306a;
+        }
+
+    
+    .tai-khoan-page .tk-bang-khung {
+        overflow-x: auto;
+    }
+
+    .tai-khoan-page .tk-bang {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+    }
+
+        .tai-khoan-page .tk-bang th {
+            padding: 10px 12px;
+            background: #fff1f6;
+            color: #b0306a;
+            font-size: 13px;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .tai-khoan-page .tk-bang td {
+            padding: 11px 12px;
+            border-bottom: 1px solid #f3d4e0;
+            vertical-align: middle;
+        }
+
+        .tai-khoan-page .tk-bang tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+    .tai-khoan-page .tk-tien {
+        color: #d9457c;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+    .tai-khoan-page .tk-trang-thai {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 20px;
+        background: #ffdbe8;
+        color: #b0306a;
+        font-size: 12px;
+        font-weight: 800;
+    }
+
+    .tai-khoan-page .tk-xem {
+        color: #d9457c;
+        font-weight: 700;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+        .tai-khoan-page .tk-xem:hover {
+            text-decoration: underline;
+        }
+
+    .tai-khoan-page .tk-rong {
+        text-align: center;
+        color: #6b4a58;
+        font-weight: 700;
+    }
+
+    
+  
+    .tai-khoan-page .ct-dau {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+    }
+
+    .tai-khoan-page .ct-quay-lai {
+        color: #6b4a58;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+        .tai-khoan-page .ct-quay-lai:hover {
+            color: #d9457c;
+        }
+
+    .tai-khoan-page .ct-tieu-de {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #b0306a;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    .tai-khoan-page .ct-luoi {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+    }
+
+        .tai-khoan-page .ct-luoi .tk-khoi {
+            margin-bottom: 0;
+        }
+
+    .tai-khoan-page .ct-phai {
+        position: sticky;
+        top: 84px;
+    }
+
+    .tai-khoan-page .tk-thong-tin > div {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 6px 0;
+        border-bottom: 1px dashed #f3d4e0;
+        font-size: 13px;
+    }
+
+        .tai-khoan-page .tk-thong-tin > div:last-child {
+            border-bottom: 0;
+        }
+
+    .tai-khoan-page .tk-thong-tin dt {
+        flex: 0 0 auto;
+        color: #8a6b78;
+        font-weight: 700;
+    }
+
+    .tai-khoan-page .tk-thong-tin dd {
+        margin: 0;
+        font-weight: 700;
+        text-align: right;
+        overflow-wrap: anywhere;
+    }
+
+    .tai-khoan-page .tk-sp {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .tai-khoan-page .tk-anh {
+        display: grid;
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #fff0f4, #fff5e8);
+    }
+
+        .tai-khoan-page .tk-anh img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tai-khoan-page .tk-anh.khong-anh img {
+            display: none;
+        }
+
+        .tai-khoan-page .tk-anh.khong-anh::after {
+            content: "🧁";
+            font-size: 18px;
+        }
+
+    .tai-khoan-page .tk-bang-sp th,
+    .tai-khoan-page .tk-bang-sp td {
+        padding: 8px 10px;
+    }
+
+    .tai-khoan-page .tk-tong {
+        margin: 10px 0 0;
+        padding-top: 8px;
+        border-top: 1px solid #f3d4e0;
+        font-size: 13px;
+    }
+
+        .tai-khoan-page .tk-tong > div {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+            color: #6b4a58;
+        }
+
+        .tai-khoan-page .tk-tong .tk-tong-cong {
+            margin-top: 6px;
+            padding-top: 8px;
+            border-top: 1px solid #f3d4e0;
+            color: #d9457c;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+
+@media (max-width: 900px) {
+    .tai-khoan-page .tk-luoi {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    
+    .tai-khoan-page .tk-menu {
+        position: static;
+        display: flex;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .tai-khoan-page .tk-chao {
+        display: none;
+    }
+
+    .tai-khoan-page .tk-menu a {
+        flex: 1;
+        justify-content: center;
+        margin: 0;
+        padding: 10px 6px;
+        font-size: 13px;
+        text-align: center;
+    }
+
+        .tai-khoan-page .tk-menu a.tk-dang-xuat {
+            margin: 0;
+        }
+    .tai-khoan-page .ct-luoi {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tai-khoan-page .ct-phai {
+        position: static;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .tai-khoan-page .ct-tieu-de {
+        font-size: 18px;
+    }
+
+    .tai-khoan-page .tk-bang-sp thead {
+        display: none;
+    }
+
+    .tai-khoan-page .tk-bang-sp,
+    .tai-khoan-page .tk-bang-sp tbody {
+        display: block;
+    }
+
+        .tai-khoan-page .tk-bang-sp tr {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2px 8px;
+            margin-bottom: 8px;
+            padding: 8px 10px;
+            border: 1px solid #f3d4e0;
+            border-radius: 10px;
+            background: #fffafd;
+        }
+
+        .tai-khoan-page .tk-bang-sp td {
+            display: block;
+            padding: 0;
+            border: 0;
+            font-size: 12px;
+        }
+
+            .tai-khoan-page .tk-bang-sp td.ct-o-ten {
+                grid-column: 1 / -1;
+                margin-bottom: 4px;
+            }
+
+            .tai-khoan-page .tk-bang-sp td[data-label]::before {
+                content: attr(data-label);
+                display: block;
+                color: #8a6b78;
+                font-size: 11px;
+                font-weight: 700;
+            }
+    .tai-khoan-page {
+        padding-top: 14px;
+        padding-bottom: 28px;
+    }
+
+        .tai-khoan-page h1 {
+            margin-bottom: 14px;
+            font-size: 22px;
+        }
+
+        .tai-khoan-page .tk-khoi {
+            padding: 14px;
+        }
+
+        .tai-khoan-page .tk-hang,
+        .tai-khoan-page .tk-hang.tk-ba {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+
+        .tai-khoan-page .tk-o {
+            font-size: 16px;
+        }
+      
+        .tai-khoan-page .tk-nut {
+            width: 100%;
+        }
+
+        .tai-khoan-page .tk-menu a {
+            flex-direction: column;
+            gap: 3px;
+            font-size: 12px;
+        }
+
+      
+        .tai-khoan-page .tk-bang-don thead {
+            display: none;
+        }
+
+        .tai-khoan-page .tk-bang-don,
+        .tai-khoan-page .tk-bang-don tbody {
+            display: block;
+        }
+
+            .tai-khoan-page .tk-bang-don tr {
+                display: block;
+                margin-bottom: 10px;
+                padding: 10px 12px;
+                border: 1px solid #f3d4e0;
+                border-radius: 12px;
+                background: #fffafd;
+            }
+
+            .tai-khoan-page .tk-bang-don td {
+                display: flex;
+                justify-content: space-between;
+                gap: 12px;
+                padding: 4px 0;
+                border: 0;
+                font-size: 13px;
+            }
+
+                .tai-khoan-page .tk-bang-don td[data-label]::before {
+                    content: attr(data-label);
+                    color: #8a6b78;
+                    font-weight: 700;
+                }
+
+                .tai-khoan-page .tk-bang-don td.tk-hanh-dong {
+                    justify-content: flex-end;
+                    padding-top: 6px;
+                }
+}
+
+.ct-hanh-dong {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+
+.ct-nut-huy {
+    padding: 10px 16px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .ct-nut-huy:hover {
+        background-color: #bb2d3b;
+    }
+
+
+.ct-thong-bao {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+    .ct-thong-bao:empty {
+        display: none;
+    }
+
+    .ct-thong-bao.thanh-cong {
+        color: #155724;
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+    }
+
+    .ct-thong-bao.that-bai {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+    }

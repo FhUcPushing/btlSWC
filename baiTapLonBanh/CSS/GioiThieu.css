@@ -1,0 +1,227 @@
+﻿
+
+.gioi-thieu {
+    
+    --gt-font-heading: "Be Vietnam Pro", "Nunito", "Segoe UI", Arial, sans-serif;
+    --gt-font-body: "Nunito", "Segoe UI", Arial, sans-serif;
+  
+    --gt-pink: var(--pink, #f27ba3);
+    --gt-pink-dark: var(--pink-dark, #d9457c);
+    --gt-pink-deep: var(--pink-deep, #b0306a);
+    --gt-pink-light: var(--pink-light, #fff1f6);
+    --gt-pink-soft: var(--pink-soft, #ffdbe8);
+    --gt-cream: var(--cream, #fffaf1);
+    --gt-text: var(--text, #6b4a58);
+    --gt-border: var(--border, #f6d6e3);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+    color: var(--gt-text);
+    font-family: var(--gt-font-body);
+}
+
+
+
+
+.tieu-de {
+    margin-bottom: 30px;
+    padding: 20px 18px;
+    border: 1px solid var(--gt-border);
+    border-radius: 18px;
+    background: linear-gradient(110deg, var(--gt-pink-soft) 0%, var(--gt-pink-light) 60%, #fff 100%);
+    color: var(--gt-pink-deep);
+    font-family: var(--gt-font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.4;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(217, 69, 124, .10);
+}
+
+
+
+
+.mo-dau {
+    padding: 26px 30px;
+    border-left: 5px solid var(--gt-pink);
+    border-radius: 0 18px 18px 0;
+    background: var(--gt-cream);
+    color: var(--gt-text);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.9;
+}
+
+    .mo-dau p {
+        margin: 0 0 22px;
+    }
+
+        .mo-dau p:last-child {
+            margin-bottom: 0;
+        }
+
+.doan-dam {
+    color: var(--gt-pink-deep);
+    font-weight: 800;
+}
+
+    .doan-dam span {
+        color: var(--gt-pink-dark);
+    }
+
+
+
+
+.banner-gioi-thieu {
+    width: 100%;
+    margin: 35px 0 50px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(217, 69, 124, .16);
+}
+
+    .banner-gioi-thieu img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+
+
+
+
+.noi-dung {
+    margin-bottom: 45px;
+}
+
+    .noi-dung h2 {
+        position: relative;
+        margin: 0 0 24px;
+        padding-bottom: 14px;
+        color: var(--gt-pink-deep);
+        font-family: var(--gt-font-heading);
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.35;
+    }
+
+       
+        .noi-dung h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 64px;
+            height: 4px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, var(--gt-pink-dark), var(--gt-pink-soft));
+        }
+
+    .noi-dung p {
+        margin: 0 0 20px;
+        color: var(--gt-text);
+        font-size: 18px;
+        line-height: 1.85;
+    }
+
+
+
+
+.anh-gioi-thieu {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(217, 69, 124, .14);
+    object-fit: cover;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .gioi-thieu {
+        padding: 30px 15px 50px;
+    }
+
+    .tieu-de {
+        padding: 16px 12px;
+        margin-bottom: 25px;
+        border-radius: 16px;
+        font-size: 21px;
+    }
+
+    .mo-dau {
+        padding: 20px 22px;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .noi-dung h2 {
+        font-size: 25px;
+    }
+
+    .noi-dung p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    .gioi-thieu {
+        padding: 20px 12px 40px;
+    }
+
+    .tieu-de {
+        padding: 14px 10px;
+        border-radius: 14px;
+        font-size: 18px;
+        line-height: 1.45;
+    }
+
+    .mo-dau {
+        padding: 16px 16px;
+        border-left-width: 4px;
+        border-radius: 0 14px 14px 0;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+        .mo-dau p {
+            margin-bottom: 16px;
+        }
+
+    .banner-gioi-thieu {
+        margin: 25px 0 35px;
+        border-radius: 14px;
+    }
+
+    .noi-dung {
+        margin-bottom: 35px;
+    }
+
+        .noi-dung h2 {
+            margin-bottom: 18px;
+            font-size: 22px;
+        }
+
+        .noi-dung p {
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+    .anh-gioi-thieu {
+        width: 100%;
+        margin: 0 auto 20px;
+        border-radius: 14px;
+    }
+}

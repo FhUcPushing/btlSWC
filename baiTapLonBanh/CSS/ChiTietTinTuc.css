@@ -1,0 +1,316 @@
+﻿
+
+.news-detail-page {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 35px 25px 60px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.chi_tiet_tin_tuc {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.khung_anh_tin_tuc {
+    width: 100%;
+    height: 480px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(220, 70, 130, 0.12);
+}
+
+.anh_tin_tuc_chinh {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.noi_dung_tin_tuc {
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.loai_tin_tuc {
+    color: #df4781;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.tieu_de_tin_tuc {
+    color: #222;
+    font-size: 30px;
+    line-height: 1.4;
+    margin: 10px 0 15px;
+}
+
+.thong_tin_ngay_dang {
+    display: flex;
+    gap: 20px;
+    color: #df4781;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.mo_ta_tin_tuc {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+
+.noi_dung_chi_tiet {
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff8fa;
+    border-radius: 15px;
+    padding: 30px 35px;
+    font-size: 16px;
+    line-height: 2;
+    color: #444;
+}
+
+    .noi_dung_chi_tiet p {
+        margin: 12px 0 18px;
+        text-align: justify;
+    }
+
+    .noi_dung_chi_tiet h2 {
+        color: #df4781;
+        font-size: 24px;
+        margin: 20px 0 15px;
+    }
+
+    .noi_dung_chi_tiet h3 {
+        color: #d83e79;
+        font-size: 19px;
+        margin: 25px 0 10px;
+    }
+
+
+.anh-trong-bai {
+    display: block;
+    width: 100%;
+    max-width: 950px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.bai-viet-lien-quan {
+    margin-top: 50px;
+}
+
+.bai-viet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+    .bai-viet-header h2 {
+        color: #df4781;
+        font-size: 21px;
+        margin: 0;
+    }
+
+.nut-xem-them {
+    text-decoration: none;
+    color: #df4781;
+    border: 1px solid #df4781;
+    border-radius: 9px;
+    padding: 8px 15px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+    .nut-xem-them:hover {
+        background: #df4781;
+        color: white;
+    }
+
+
+.danh-sach-bai-viet {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+
+.the_bai_viet {
+    position: relative;
+    background: white;
+    border: 1px solid #ffd0df;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 5px 13px rgba(220, 70, 130, 0.08);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+    .the_bai_viet:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 7px 18px rgba(220, 70, 130, 0.15);
+    }
+
+.bai_viet_anh {
+    display: block;
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .bai_viet_anh img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+    }
+
+.the_bai_viet:hover .bai_viet_anh img {
+    transform: scale(1.05);
+}
+
+.bai_viet_noi_dung {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.bai_viet_loai {
+    color: #df4781;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.bai_viet_tieu_de {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 8px 0;
+}
+
+    .bai_viet_tieu_de:hover {
+        color: #df4781;
+    }
+
+.bai_viet_mo_ta {
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+
+.nut_doc_them {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 9px 18px;
+    background: white;
+    color: #df4781;
+    border: 1px solid #df4781;
+    border-radius: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    
+    .nut_doc_them:hover {
+        background: #df4781;
+        color: white;
+    }
+
+
+@media screen and (max-width: 900px) {
+    .danh-sach-bai-viet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .khung_anh_tin_tuc {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .khung_anh_tin_tuc {
+        height: 280px;
+    }
+
+    .tieu_de_tin_tuc {
+        font-size: 24px;
+    }
+
+    .noi_dung_chi_tiet {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .news-detail-page {
+        padding: 20px 12px 40px;
+    }
+
+    .danh-sach-bai-viet {
+        grid-template-columns: 1fr;
+    }
+
+    .noi_dung_chi_tiet {
+        padding: 15px;
+    }
+}
+
+.nut_doc_them {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: auto;
+    align-self: flex-start;
+    padding: 10px 20px;
+    background: white;
+    color: #df4781;
+    border: 1px solid #df4781;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+    .nut_doc_them:hover {
+        background: #df4781;
+        color: white;
+        border-color: #df4781;
+    }
+
+.anh-trong-bai {
+    display: block;
+    width: 85%;
+    max-width: 750px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 10px;
+    object-fit: cover;
+}

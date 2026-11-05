@@ -1,0 +1,292 @@
+﻿.auth-container {
+    background-color: #ffffff;
+    padding: 35px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.15);
+    width: 100%;
+    max-width: 420px;
+    margin: 40px auto;
+}
+
+.brand-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+    .brand-header h2 {
+        color: #d63384;
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .brand-header p {
+        color: #888;
+        font-size: 14px;
+    }
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 6px;
+        color: #495057;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 2px solid #ffe1e6;
+        border-radius: 10px;
+        outline: none;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+
+        .form-group input:focus {
+            border-color: #ff85a2;
+            box-shadow: 0 0 8px rgba(255, 133, 162, 0.25);
+        }
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b8b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-submit:hover {
+        background-color: #d63384;
+    }
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+    .message.error {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+.auth-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+    .auth-footer a {
+        color: #d63384;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+
+.form-group.remember-me label {
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none; 
+}
+
+.form-group.remember-me {
+    margin-bottom: 15px;
+    margin-top: -5px;
+}
+
+    .form-group.remember-me input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+        accent-color: #ff6b8b; 
+        cursor: pointer;
+    }
+
+
+
+.field-error:empty {
+    display: none;
+}
+
+.field-error:not(:empty) {
+    display: block;
+    margin-top: 5px;
+    color: #dc3545;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.form-group input.input-error {
+    border-color: #dc3545;
+    box-shadow: 0 0 5px rgba(220, 53, 69, 0.15);
+}
+.message.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+    .message.success a {
+        color: #0b5e2b;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+.dangky-layout {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.dangky-form {
+    width: 100%;
+    min-width: 0;
+}
+
+    
+    .dangky-form .auth-container {
+        width: 100%;
+        max-width: 420px;
+        margin: 40px auto;
+        box-sizing: border-box;
+    }
+
+
+.dangky-thongbao {
+    position: fixed;
+    top: 100px;
+    right: 24px;
+    z-index: 9999;
+    width: 350px;
+    max-width: calc(100vw - 32px);
+    padding: 0;
+}
+
+    
+    .dangky-thongbao .message.success {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 14px 16px;
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+        .dangky-thongbao .message.success a {
+            color: #0b5e2b;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+
+@media (max-width: 768px) {
+    .dangky-thongbao {
+        top: 90px;
+        right: 12px;
+        width: 300px;
+        max-width: calc(100vw - 24px);
+    }
+}
+
+.dangky-form .auth-container {
+    padding: 24px 28px;
+    margin: 22px auto;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+
+.dangky-form .brand-header {
+    margin-bottom: 16px;
+}
+
+    .dangky-form .brand-header h2 {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+
+    .dangky-form .brand-header p {
+        font-size: 13px;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+
+.dangky-form .form-group {
+    margin-bottom: 12px;
+}
+
+    .dangky-form .form-group label {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+
+   
+    .dangky-form .form-group input {
+        box-sizing: border-box;
+        padding: 9px 12px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+
+.dangky-form .btn-submit {
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+.dangky-form .auth-footer {
+    margin-top: 14px;
+    font-size: 13px;
+}
+@media (min-width: 769px) and (max-height: 850px) {
+    .dangky-form .auth-container {
+        padding: 20px 26px;
+        margin: 14px auto;
+    }
+
+    .dangky-form .brand-header {
+        margin-bottom: 12px;
+    }
+
+    .dangky-form .form-group {
+        margin-bottom: 9px;
+    }
+
+        .dangky-form .form-group input {
+            padding: 8px 12px;
+        }
+
+    .dangky-form .auth-footer {
+        margin-top: 10px;
+    }
+}

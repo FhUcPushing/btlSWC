@@ -1,0 +1,354 @@
+﻿
+.gio-hang-page {
+    padding-top: 32px;
+    padding-bottom: 70px;
+    color: #35282c;
+}
+
+    .gio-hang-page h1 {
+        position: relative;
+        margin: 0 0 36px;
+        padding-bottom: 14px;
+        color: #b0306a;
+        font-size: 32px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+        .gio-hang-page h1::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 56px;
+            height: 4px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #d9457c, #ffdbe8);
+            content: "";
+            transform: translateX(-50%);
+        }
+
+    
+
+    .gio-hang-page .nut-hong {
+        display: inline-flex;
+        min-height: 46px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 26px;
+        border: 1px solid #d9457c;
+        border-radius: 26px;
+        background: #d9457c;
+        color: #ffffff;
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.2s;
+    }
+
+        .gio-hang-page .nut-hong:hover {
+            transform: translateY(-2px);
+            border-color: #b0306a;
+            background: #b0306a;
+            color: #ffffff;
+        }
+
+   
+        .gio-hang-page .nut-hong.nut-vien {
+            background: #ffffff;
+            color: #d9457c;
+        }
+
+            .gio-hang-page .nut-hong.nut-vien:hover {
+                border-color: #d9457c;
+                background: #fff1f6;
+                color: #b0306a;
+            }
+
+   
+
+    .gio-hang-page .bang-gio-hang-khung {
+        overflow-x: auto;
+        border: 1px solid #f3d4e0;
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 6px 24px rgba(217, 69, 124, 0.08);
+    }
+
+    .gio-hang-page .bang-gio-hang {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .gio-hang-page .bang-gio-hang th {
+            padding: 16px 18px;
+            background: #fff1f6;
+            color: #b0306a;
+            font-size: 14px;
+            font-weight: 800;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .gio-hang-page .bang-gio-hang td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #f3d4e0;
+            color: #4b303a;
+            font-size: 15px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .gio-hang-page .bang-gio-hang tbody tr:last-child td {
+            border-bottom: 0;
+        }
+
+        .gio-hang-page .bang-gio-hang tbody tr:hover td {
+            background: #fffafd;
+        }
+
+
+
+    .gio-hang-page .san-pham-o {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .gio-hang-page .anh-nho {
+        display: grid;
+        flex: 0 0 72px;
+        width: 72px;
+        height: 72px;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #fff0f4, #fff5e8);
+    }
+
+        .gio-hang-page .anh-nho img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+       
+        .gio-hang-page .anh-nho.khong-anh img {
+            display: none;
+        }
+
+        .gio-hang-page .anh-nho.khong-anh::after {
+            content: "🧁";
+            font-size: 30px;
+        }
+
+    .gio-hang-page .ten-banh-gio {
+        color: #1f1f1f;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .gio-hang-page .cot-thanh-tien {
+        color: #d9457c;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+
+    .gio-hang-page .so-luong-gio {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px;
+        border: 1.5px solid #f0bad0;
+        border-radius: 26px;
+        background: #ffffff;
+    }
+
+    .gio-hang-page .nut-sl {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: #fff1f6;
+        color: #d9457c;
+        font: inherit;
+        font-size: 18px;
+        font-weight: 800;
+        line-height: 1;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+
+        .gio-hang-page .nut-sl:hover {
+            background: #d9457c;
+            color: #ffffff;
+        }
+
+    .gio-hang-page .so-luong-so {
+        min-width: 26px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+   
+
+    .gio-hang-page .nut-xoa {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        border: 1px solid #f0bad0;
+        border-radius: 20px;
+        background: #ffffff;
+        color: #d9457c;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+        .gio-hang-page .nut-xoa:hover {
+            border-color: #d9457c;
+            background: #d9457c;
+            color: #ffffff;
+        }
+
+
+
+    .gio-hang-page .tong-ket-gio {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+        gap: 14px;
+        margin-top: 26px;
+    }
+
+    .gio-hang-page .tong-nhan {
+        color: #6b4a58;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .gio-hang-page .tong-so {
+        color: #d9457c;
+        font-size: 30px;
+        font-weight: 800;
+    }
+
+    .gio-hang-page .ghi-chu-gio {
+        margin: 6px 0 0;
+        color: #8a6b78;
+        font-size: 14px;
+        text-align: right;
+    }
+
+    .gio-hang-page .hanh-dong-gio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 14px;
+        margin-top: 28px;
+    }
+
+   
+
+    .gio-hang-page .gio-hang-rong {
+        padding: 48px 24px;
+        border: 1px dashed #f0bad0;
+        border-radius: 18px;
+        background: #fff7fa;
+        text-align: center;
+    }
+
+        .gio-hang-page .gio-hang-rong .rong-icon {
+            display: grid;
+            width: 84px;
+            height: 84px;
+            margin: 0 auto 18px;
+            place-items: center;
+            border-radius: 50%;
+            background: #ffdbe8;
+            color: #d9457c;
+            font-size: 34px;
+        }
+
+        .gio-hang-page .gio-hang-rong p {
+            margin: 0 0 22px;
+            color: #6b4a58;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+@media (max-width: 700px) {
+    .gio-hang-page h1 {
+        font-size: 26px;
+    }
+
+    .gio-hang-page .bang-gio-hang thead {
+        display: none;
+    }
+
+    .gio-hang-page .bang-gio-hang,
+    .gio-hang-page .bang-gio-hang tbody,
+    .gio-hang-page .bang-gio-hang tr,
+    .gio-hang-page .bang-gio-hang td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        .gio-hang-page .bang-gio-hang tr {
+            padding: 14px 16px;
+            border-bottom: 1px solid #f3d4e0;
+        }
+
+        .gio-hang-page .bang-gio-hang tbody tr:last-child {
+            border-bottom: 0;
+        }
+
+        .gio-hang-page .bang-gio-hang td,
+        .gio-hang-page .bang-gio-hang tbody tr:hover td {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 7px 0;
+            border: 0;
+            background: none;
+            font-size: 14px;
+        }
+
+            .gio-hang-page .bang-gio-hang td::before {
+                color: #6b4a58;
+                font-size: 13px;
+                font-weight: 700;
+                content: attr(data-label);
+            }
+
+            .gio-hang-page .bang-gio-hang td.cot-san-pham {
+                padding-top: 0;
+            }
+
+                .gio-hang-page .bang-gio-hang td.cot-san-pham::before {
+                    display: none;
+                }
+
+    .gio-hang-page .tong-so {
+        font-size: 26px;
+    }
+
+    .gio-hang-page .hanh-dong-gio {
+        flex-direction: column-reverse;
+    }
+
+        .gio-hang-page .hanh-dong-gio .nut-hong {
+            width: 100%;
+        }
+}

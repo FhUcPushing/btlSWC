@@ -1,0 +1,551 @@
+﻿
+.dat-hang-page {
+    padding-top: 32px;
+    padding-bottom: 70px;
+    color: #35282c;
+}
+
+    .dat-hang-page h1 {
+        position: relative;
+        margin: 0 0 36px;
+        padding-bottom: 14px;
+        color: #b0306a;
+        font-size: 32px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+        .dat-hang-page h1::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 56px;
+            height: 4px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #d9457c, #ffdbe8);
+            content: "";
+            transform: translateX(-50%);
+        }
+
+   
+
+    .dat-hang-page .nut-hong {
+        display: inline-flex;
+        min-height: 46px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 26px;
+        border: 1px solid #d9457c;
+        border-radius: 26px;
+        background: #d9457c;
+        color: #ffffff;
+        font: inherit;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background 0.2s, border-color 0.2s, transform 0.2s;
+    }
+
+        .dat-hang-page .nut-hong:hover {
+            transform: translateY(-2px);
+            border-color: #b0306a;
+            background: #b0306a;
+            color: #ffffff;
+        }
+
+        .dat-hang-page .nut-hong.nut-day {
+            display: flex;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+  
+
+    .dat-hang-page .dat-hang-luoi {
+        display: grid;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+    }
+
+  
+
+    .dat-hang-page .khoi-dat-hang {
+        margin-bottom: 20px;
+        padding: 26px;
+        border: 1px solid #f3d4e0;
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 6px 24px rgba(217, 69, 124, 0.08);
+    }
+
+        .dat-hang-page .khoi-dat-hang h2 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 20px;
+            color: #b0306a;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+    .dat-hang-page .so-buoc {
+        display: inline-grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #f27ba3, #d9457c);
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 800;
+    }
+
+    .dat-hang-page .hai-cot {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .dat-hang-page .o-truong {
+        margin-bottom: 16px;
+    }
+
+        .dat-hang-page .o-truong:last-child {
+            margin-bottom: 0;
+        }
+
+    .dat-hang-page .hai-cot .o-truong {
+        margin-bottom: 0;
+    }
+
+    .dat-hang-page .nhan-o {
+        display: block;
+        margin-bottom: 7px;
+        color: #6b4a58;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .dat-hang-page .bat-buoc {
+        color: #d9457c;
+    }
+
+    .dat-hang-page .o-nhap {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 16px;
+        border: 1.5px solid #f0bad0;
+        border-radius: 12px;
+        outline: none;
+        background: #fffafd;
+        color: #35282c;
+        font: inherit;
+        transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+        .dat-hang-page .o-nhap::placeholder {
+            color: #b69aa6;
+        }
+
+        .dat-hang-page .o-nhap:focus {
+            border-color: #d9457c;
+            box-shadow: 0 0 0 3px rgba(217, 69, 124, 0.12);
+        }
+
+    .dat-hang-page textarea.o-nhap {
+        resize: vertical;
+        line-height: 1.6;
+    }
+
+ 
+
+    .dat-hang-page .danh-sach-thanh-toan {
+        display: grid;
+        gap: 12px;
+    }
+
+    .dat-hang-page .the-thanh-toan {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 14px 16px;
+        border: 1.5px solid #f0bad0;
+        border-radius: 14px;
+        background: #ffffff;
+        cursor: pointer;
+        transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+
+        .dat-hang-page .the-thanh-toan:hover {
+            background: #fffafd;
+        }
+
+        .dat-hang-page .the-thanh-toan:has(input:checked) {
+            border-color: #d9457c;
+            background: #fff1f6;
+            box-shadow: 0 0 0 3px rgba(217, 69, 124, 0.10);
+        }
+
+        .dat-hang-page .the-thanh-toan input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            accent-color: #d9457c;
+        }
+
+    .dat-hang-page .tt-bieu-tuong {
+        display: grid;
+        flex: 0 0 42px;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border-radius: 50%;
+        background: #ffdbe8;
+        color: #d9457c;
+        font-size: 18px;
+    }
+
+    .dat-hang-page .tt-noi-dung {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+        .dat-hang-page .tt-noi-dung strong {
+            color: #35282c;
+            font-size: 15px;
+        }
+
+        .dat-hang-page .tt-noi-dung small {
+            color: #8a6b78;
+            font-size: 13px;
+        }
+
+
+
+    .dat-hang-page .dat-hang-phai {
+        position: sticky;
+        top: 20px;
+    }
+
+    .dat-hang-page .tom-tat {
+        padding: 26px;
+        border: 1px solid #f3d4e0;
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 6px 24px rgba(217, 69, 124, 0.08);
+    }
+
+        .dat-hang-page .tom-tat h2 {
+            margin: 0 0 18px;
+            color: #b0306a;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+    .dat-hang-page .tt-danh-sach {
+        max-height: 300px;
+        margin-bottom: 18px;
+        overflow-y: auto;
+    }
+
+    .dat-hang-page .tt-dong {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px dashed #f3d4e0;
+    }
+
+        .dat-hang-page .tt-dong:last-child {
+            border-bottom: 0;
+        }
+
+    .dat-hang-page .tt-anh {
+        display: grid;
+        flex: 0 0 56px;
+        width: 56px;
+        height: 56px;
+        place-items: center;
+        overflow: hidden;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #fff0f4, #fff5e8);
+    }
+
+        .dat-hang-page .tt-anh img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dat-hang-page .tt-anh.khong-anh img {
+            display: none;
+        }
+
+        .dat-hang-page .tt-anh.khong-anh::after {
+            content: "🧁";
+            font-size: 24px;
+        }
+
+    .dat-hang-page .tt-ten {
+        flex: 1;
+        min-width: 0;
+        color: #1f1f1f;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+        .dat-hang-page .tt-ten span {
+            display: block;
+            margin-top: 2px;
+            color: #8a6b78;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+    .dat-hang-page .tt-gia {
+        color: #d9457c;
+        font-size: 15px;
+        font-weight: 800;
+        white-space: nowrap;
+    }
+
+   
+
+    .dat-hang-page .khung-ma {
+        margin: 6px 0 16px;
+        padding: 16px 0;
+        border-top: 1px solid #f3d4e0;
+        border-bottom: 1px solid #f3d4e0;
+    }
+
+    .dat-hang-page .hang-ma {
+        display: flex;
+        gap: 10px;
+    }
+
+        .dat-hang-page .hang-ma .o-nhap {
+            flex: 1;
+            min-width: 0;
+            text-transform: uppercase;
+        }
+
+    .dat-hang-page .nut-ap-dung {
+        padding: 0 20px;
+        border: 1px solid #d9457c;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #d9457c;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+    }
+
+        .dat-hang-page .nut-ap-dung:hover {
+            background: #d9457c;
+            color: #ffffff;
+        }
+
+    .dat-hang-page .thong-bao-ma {
+        margin: 10px 0 0;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+        .dat-hang-page .thong-bao-ma.thanh-cong {
+            color: #1e7e4a;
+        }
+
+        .dat-hang-page .thong-bao-ma.loi {
+            color: #b0306a;
+        }
+
+
+
+    .dat-hang-page .tt-hang {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 6px 0;
+        color: #6b4a58;
+        font-size: 15px;
+    }
+
+        .dat-hang-page .tt-hang span:last-child {
+            font-weight: 700;
+            color: #35282c;
+        }
+
+        .dat-hang-page .tt-hang.tt-giam span:last-child {
+            color: #1e7e4a;
+        }
+
+        .dat-hang-page .tt-hang.tt-tong {
+            margin-top: 10px;
+            padding-top: 16px;
+            border-top: 1px solid #f3d4e0;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+            .dat-hang-page .tt-hang.tt-tong span:last-child {
+                color: #d9457c;
+                font-size: 26px;
+                font-weight: 800;
+            }
+
+    .dat-hang-page .ghi-chu-ship {
+        margin: 0 0 4px;
+        color: #8a6b78;
+        font-size: 13px;
+    }
+
+    .dat-hang-page .quay-lai-gio {
+        display: block;
+        margin-top: 16px;
+        color: #6b4a58;
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .dat-hang-page .quay-lai-gio:hover {
+            color: #d9457c;
+        }
+
+
+
+    .dat-hang-page .dat-hang-loi {
+        margin-bottom: 22px;
+        padding: 16px 22px;
+        border: 1px solid #f0bad0;
+        border-radius: 14px;
+        background: #fff1f6;
+        color: #b0306a;
+    }
+
+        .dat-hang-page .dat-hang-loi ul {
+            margin: 8px 0 0;
+            padding-left: 22px;
+        }
+
+        .dat-hang-page .dat-hang-loi li {
+            margin-bottom: 3px;
+        }
+
+   
+
+    .dat-hang-page .dat-hang-thanh-cong {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 40px 32px;
+        border: 1px solid #f3d4e0;
+        border-radius: 22px;
+        background: #ffffff;
+        box-shadow: 0 6px 24px rgba(217, 69, 124, 0.08);
+        text-align: center;
+    }
+
+        .dat-hang-page .dat-hang-thanh-cong .tc-icon {
+            margin-bottom: 8px;
+            color: #2fae6b;
+            font-size: 64px;
+            line-height: 1;
+        }
+
+        .dat-hang-page .dat-hang-thanh-cong h2 {
+            margin: 0 0 10px;
+            color: #b0306a;
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .dat-hang-page .dat-hang-thanh-cong .tc-loi-cam-on {
+            margin: 0 0 24px;
+            color: #6b4a58;
+            line-height: 1.7;
+        }
+
+            .dat-hang-page .dat-hang-thanh-cong .tc-loi-cam-on strong {
+                color: #d9457c;
+            }
+
+    .dat-hang-page .tc-chi-tiet {
+        margin: 0 0 28px;
+        padding: 8px 20px;
+        border-radius: 14px;
+        background: #fff7fa;
+        text-align: left;
+    }
+
+        .dat-hang-page .tc-chi-tiet > div {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 0;
+            border-bottom: 1px dashed #f3d4e0;
+        }
+
+            .dat-hang-page .tc-chi-tiet > div:last-child {
+                border-bottom: 0;
+            }
+
+        .dat-hang-page .tc-chi-tiet dt {
+            flex: 0 0 auto;
+            color: #8a6b78;
+            font-weight: 700;
+        }
+
+        .dat-hang-page .tc-chi-tiet dd {
+            margin: 0;
+            color: #35282c;
+            font-weight: 700;
+            text-align: right;
+            overflow-wrap: anywhere;
+        }
+
+        .dat-hang-page .tc-chi-tiet .tc-tong dd {
+            color: #d9457c;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+
+
+@media (max-width: 900px) {
+    .dat-hang-page .dat-hang-luoi {
+        grid-template-columns: 1fr;
+    }
+
+    .dat-hang-page .dat-hang-phai {
+        position: static;
+    }
+}
+
+@media (max-width: 520px) {
+    .dat-hang-page h1 {
+        font-size: 26px;
+    }
+
+    .dat-hang-page .khoi-dat-hang,
+    .dat-hang-page .tom-tat {
+        padding: 18px;
+    }
+
+    .dat-hang-page .hai-cot {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .dat-hang-page .dat-hang-thanh-cong {
+        padding: 28px 18px;
+    }
+}
