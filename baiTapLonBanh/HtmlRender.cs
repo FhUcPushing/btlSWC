@@ -7,8 +7,6 @@ using System.Web.UI;
 
 namespace baiTapLonBanh
 {
-    // Các phương thức tạo HTML thuần từ danh sách dữ liệu.
-    // Dữ liệu động được encode trước khi đưa vào thuộc tính hoặc nội dung HTML.
     public static class HtmlRender
     {
         private static string E(object value)

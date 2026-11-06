@@ -98,7 +98,6 @@
         <h1>Tài khoản của tôi</h1>
 
         <div class="tk-luoi">
-            <!-- ===== MENU TRÁI ===== -->
             <aside class="tk-menu">
                 <div class="tk-chao">
                     <i class="fa-solid fa-circle-user"></i>

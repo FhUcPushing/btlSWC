@@ -203,6 +203,7 @@
     <Content Include="JS\DangNhap.js" />
     <Content Include="JS\SanPham.js" />
     <Content Include="JS\Site.js" />
+    <Content Include="JS\SuaSanPham.js" />
     <Content Include="JS\TaiKhoan.js" />
     <Content Include="JS\ThemSanPham.js" />
     <Content Include="JS\TrangChu.js" />

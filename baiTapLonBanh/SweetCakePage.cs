@@ -5,7 +5,6 @@ using System.Web.UI.HtmlControls;
 
 namespace baiTapLonBanh
 {
-    // Trang co header tai khoan dung chung, nhung moi trang van co HTML rieng.
     public class SweetCakePage : Page
     {
         protected override void OnPreRender(EventArgs e)
