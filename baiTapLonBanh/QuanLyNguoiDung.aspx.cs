@@ -9,6 +9,11 @@ namespace baiTapLonBanh
 {
     public partial class QuanLyNguoiDung : SweetCakePage
     {
+        // Lưu thông báo lỗi để hiển thị ngay bên dưới từng ô nhập.
+        private string loiHoTenMoi = "";
+        private string loiTenDangNhapMoi = "";
+        private string loiMatKhauMoi = "";
+
         protected void Page_Load(object sender, EventArgs e)
         {
             NguoiDung taiKhoan = Session["TaiKhoan"] as NguoiDung;
@@ -76,6 +81,7 @@ namespace baiTapLonBanh
                 {
                     foreach (NguoiDung nguoi in danhSachGoc)
                     {
+                        // Trang này chỉ quản lý khách hàng, không thao tác tài khoản Admin.
                         if (nguoi != null && nguoi.VaiTro == "KhachHang")
                         {
                             ketQua.Add(new NguoiDung
@@ -182,7 +188,7 @@ namespace baiTapLonBanh
                   .Append("<a class='admin-detail-link' href='").Append(HttpUtility.HtmlAttributeEncode(urlSua)).Append("'><i class='fa-solid fa-pen'></i> Sửa</a> ")
                   .Append("<button type='submit' class='admin-delete-btn' name='xoaNguoiDung' value='")
                   .Append(HttpUtility.HtmlAttributeEncode(tenDangNhap))
-                  .Append("' onclick=\"return confirm('Bạn có chắc chắn muốn xóa tài khoản này không? Lịch sử đơn hàng cũ sẽ được giữ lại.');\"><i class='fa-solid fa-trash'></i> Xóa</button>")
+                  .Append("' data-confirm-delete='true'><i class='fa-solid fa-trash'></i> Xóa</button>")
                   .Append("</td></tr>");
             }
 
@@ -229,6 +235,8 @@ namespace baiTapLonBanh
         {
             string tenXem = Request.QueryString["xem"];
             string tenSua = Request.QueryString["sua"];
+
+            // Khi cập nhật không hợp lệ, giữ lại nội dung người quản trị đã nhập.
             if (Request.HttpMethod == "POST" && Request.Form["capNhatNguoiDung"] == "1")
             {
                 tenSua = Request.Form["tenDangNhapCu"];
@@ -291,14 +299,20 @@ namespace baiTapLonBanh
               .Append("<input type='hidden' name='tenDangNhapCu' value='").Append(HttpUtility.HtmlAttributeEncode(tenCu)).Append("' />")
               .Append("<div class='admin-form-group'><label for='hoTenMoi'>Họ và tên</label>")
               .Append("<input type='text' id='hoTenMoi' name='hoTenMoi' maxlength='50' required value='")
-              .Append(HttpUtility.HtmlAttributeEncode(hoTen)).Append("' /></div>")
+              .Append(HttpUtility.HtmlAttributeEncode(hoTen)).Append("' />")
+              .Append("<span id='loiHoTenMoi' class='admin-field-error' role='alert'>")
+              .Append(HttpUtility.HtmlEncode(loiHoTenMoi)).Append("</span></div>")
               .Append("<div class='admin-form-group'><label for='tenDangNhapMoi'>Tên đăng nhập</label>")
               .Append("<input type='text' id='tenDangNhapMoi' name='tenDangNhapMoi' minlength='4' maxlength='20' required value='")
               .Append(HttpUtility.HtmlAttributeEncode(tenMoi)).Append("' />")
-              .Append("<small>4–20 ký tự, chỉ gồm chữ không dấu, số và dấu gạch dưới.</small></div>")
+              .Append("<small>4–20 ký tự, chỉ gồm chữ không dấu, số và dấu gạch dưới.</small>")
+              .Append("<span id='loiTenDangNhapMoi' class='admin-field-error' role='alert'>")
+              .Append(HttpUtility.HtmlEncode(loiTenDangNhapMoi)).Append("</span></div>")
               .Append("<div class='admin-form-group'><label for='matKhauMoi'>Mật khẩu mới (không bắt buộc)</label>")
               .Append("<input type='password' id='matKhauMoi' name='matKhauMoi' minlength='8' autocomplete='new-password' />")
-              .Append("<small>Để trống nếu không muốn thay đổi mật khẩu. Nếu nhập, mật khẩu phải có ít nhất 8 ký tự.</small></div>")
+              .Append("<small>Để trống nếu không muốn thay đổi mật khẩu. Nếu nhập, mật khẩu phải có ít nhất 8 ký tự.</small>")
+              .Append("<span id='loiMatKhauMoi' class='admin-field-error' role='alert'>")
+              .Append(HttpUtility.HtmlEncode(loiMatKhauMoi)).Append("</span></div>")
               .Append("<div class='admin-product-actions'>")
               .Append("<button type='submit' class='admin-btn' name='capNhatNguoiDung' value='1'><i class='fa-solid fa-floppy-disk'></i> Lưu thay đổi</button>")
               .Append("<a class='admin-detail-link' href='QuanLyNguoiDung.aspx'>Hủy</a>")
@@ -320,17 +334,17 @@ namespace baiTapLonBanh
             }
             if (hoTenMoi.Length < 2 || hoTenMoi.Length > 50 || Regex.IsMatch(hoTenMoi, @"\d"))
             {
-                HienThongBao("Họ và tên phải từ 2 đến 50 ký tự và không chứa chữ số.", false);
+                loiHoTenMoi = "Họ và tên phải từ 2 đến 50 ký tự và không chứa chữ số.";
                 return false;
             }
             if (!Regex.IsMatch(tenMoi, @"^[A-Za-z0-9_]{4,20}$"))
             {
-                HienThongBao("Tên đăng nhập phải có 4–20 ký tự, chỉ gồm chữ không dấu, số và dấu gạch dưới.", false);
+                loiTenDangNhapMoi = "Tên đăng nhập phải có 4–20 ký tự, chỉ gồm chữ không dấu, số và dấu gạch dưới.";
                 return false;
             }
             if (matKhauMoi != "" && matKhauMoi.Length < 8)
             {
-                HienThongBao("Mật khẩu mới phải có ít nhất 8 ký tự.", false);
+                loiMatKhauMoi = "Mật khẩu mới phải có ít nhất 8 ký tự.";
                 return false;
             }
 
@@ -407,7 +421,7 @@ namespace baiTapLonBanh
 
             if (biTrungTen)
             {
-                HienThongBao("Tên đăng nhập này đã được sử dụng bởi tài khoản khác.", false);
+                loiTenDangNhapMoi = "Tên đăng nhập này đã được sử dụng bởi tài khoản khác.";
                 return false;
             }
             if (khongTimThay || !daCapNhat)

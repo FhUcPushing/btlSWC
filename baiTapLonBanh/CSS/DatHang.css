@@ -27,7 +27,7 @@
             transform: translateX(-50%);
         }
 
-   
+
 
     .dat-hang-page .nut-hong {
         display: inline-flex;
@@ -61,7 +61,7 @@
             margin-top: 20px;
         }
 
-  
+
 
     .dat-hang-page .dat-hang-luoi {
         display: grid;
@@ -70,7 +70,7 @@
         align-items: start;
     }
 
-  
+
 
     .dat-hang-page .khoi-dat-hang {
         margin-bottom: 20px;
@@ -161,7 +161,7 @@
         line-height: 1.6;
     }
 
- 
+
 
     .dat-hang-page .danh-sach-thanh-toan {
         display: grid;
@@ -316,7 +316,7 @@
         white-space: nowrap;
     }
 
-   
+
 
     .dat-hang-page .khung-ma {
         margin: 6px 0 16px;
@@ -441,7 +441,7 @@
             margin-bottom: 3px;
         }
 
-   
+
 
     .dat-hang-page .dat-hang-thanh-cong {
         max-width: 640px;
@@ -548,4 +548,18 @@
     .dat-hang-page .dat-hang-thanh-cong {
         padding: 28px 18px;
     }
+}
+
+
+/* Thong bao loi don gian ngay ben duoi tung truong dat hang */
+.dat-hang-page .field-error:empty {
+    display: none;
+}
+
+.dat-hang-page .field-error:not(:empty) {
+    display: block;
+    margin-top: 5px;
+    color: #ff0000;
+    font-size: 13px;
+    line-height: 1.4;
 }

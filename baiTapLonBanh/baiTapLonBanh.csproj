@@ -201,6 +201,8 @@
     <Content Include="JS\ChiTietSanPham.js" />
     <Content Include="JS\DangKy.js" />
     <Content Include="JS\DangNhap.js" />
+    <Content Include="JS\DatHang.js" />
+    <Content Include="JS\QuanLyNguoiDung.js" />
     <Content Include="JS\SanPham.js" />
     <Content Include="JS\Site.js" />
     <Content Include="JS\SuaSanPham.js" />

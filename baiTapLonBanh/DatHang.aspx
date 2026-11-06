@@ -101,8 +101,6 @@
 
         <div ID="pnlDatHang" runat="server">
 
-            <div id="khungLoi" runat="server" visible="false" class="dat-hang-loi"></div>
-
             <div class="dat-hang-luoi">
 
 
@@ -115,22 +113,26 @@
                         <div class="hai-cot">
                             <div class="o-truong">
                                 <label class="nhan-o" for="txtHoTen">Họ và tên <span class="bat-buoc">*</span></label>
-                                <input ID="txtHoTen" runat="server" class="o-nhap" maxlength="60" placeholder="Nguyễn Văn A"  type="text" ClientIDMode="Static" />
+                                <input ID="txtHoTen" runat="server" class="o-nhap" maxlength="60" placeholder="Nguyễn Văn A" type="text" ClientIDMode="Static" aria-describedby="loiHoTen" />
+                                <span id="loiHoTen" runat="server" class="field-error" ClientIDMode="Static"></span>
                             </div>
                             <div class="o-truong">
                                 <label class="nhan-o" for="txtSoDienThoai">Số điện thoại <span class="bat-buoc">*</span></label>
-                                <input ID="txtSoDienThoai" runat="server" class="o-nhap" maxlength="15" placeholder="0901 234 567"  type="text" ClientIDMode="Static" />
+                                <input ID="txtSoDienThoai" runat="server" class="o-nhap" maxlength="15" placeholder="0901 234 567" type="text" ClientIDMode="Static" aria-describedby="loiSoDienThoai" />
+                                <span id="loiSoDienThoai" runat="server" class="field-error" ClientIDMode="Static"></span>
                             </div>
                         </div>
 
                         <div class="o-truong">
                             <label class="nhan-o" for="txtEmail">Email (không bắt buộc)</label>
-                            <input ID="txtEmail" runat="server" class="o-nhap" maxlength="100" placeholder="email@example.com"  type="text" ClientIDMode="Static" />
+                            <input ID="txtEmail" runat="server" class="o-nhap" maxlength="100" placeholder="email@example.com" type="text" ClientIDMode="Static" aria-describedby="loiEmail" />
+                            <span id="loiEmail" runat="server" class="field-error" ClientIDMode="Static"></span>
                         </div>
 
                         <div class="o-truong">
                             <label class="nhan-o" for="txtDiaChi">Địa chỉ nhận hàng <span class="bat-buoc">*</span></label>
-                            <input ID="txtDiaChi" runat="server" class="o-nhap" maxlength="200" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố"  type="text" ClientIDMode="Static" />
+                            <input ID="txtDiaChi" runat="server" class="o-nhap" maxlength="200" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" type="text" ClientIDMode="Static" aria-describedby="loiDiaChi" />
+                            <span id="loiDiaChi" runat="server" class="field-error" ClientIDMode="Static"></span>
                         </div>
                     </section>
 
@@ -141,7 +143,8 @@
                         <div class="hai-cot">
                             <div class="o-truong">
                                 <label class="nhan-o" for="ngayNhan">Ngày nhận <span class="bat-buoc">*</span></label>
-                                <input type="date" id="ngayNhan" runat="server" class="o-nhap" ClientIDMode="Static" />
+                                <input type="date" id="ngayNhan" runat="server" class="o-nhap" ClientIDMode="Static" aria-describedby="loiNgayNhan" />
+                                <span id="loiNgayNhan" runat="server" class="field-error" ClientIDMode="Static"></span>
                             </div>
                             <div class="o-truong">
                                 <label class="nhan-o" for="ddlGio">Khung giờ <span class="bat-buoc">*</span></label>
@@ -154,6 +157,7 @@
                                     <option value="16">16:00 - 18:00</option>
                                     <option value="18">18:00 - 20:00</option>
                                 </select>
+                                <span id="loiKhungGio" runat="server" class="field-error" ClientIDMode="Static"></span>
                             </div>
                         </div>
                     </section>
@@ -172,6 +176,7 @@
                         <h2><span class="so-buoc">4</span> Phương thức thanh toán</h2>
 
                         <div id="khuThanhToan" runat="server" class="danh-sach-thanh-toan"></div>
+                        <span id="loiThanhToan" runat="server" class="field-error" ClientIDMode="Static"></span>
                     </section>
 
                 </div>
@@ -292,6 +297,7 @@
 </footer>
     </form>
 
+    <script src="JS/DatHang.js?v=1" defer="defer"></script>
     <script src="JS/Site.js"></script>
 </body>
 </html>

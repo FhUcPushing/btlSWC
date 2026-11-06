@@ -11,11 +11,11 @@ namespace baiTapLonBanh
 {
     public partial class DatHang : SweetCakePage
     {
-       
-        private const decimal PhiShipMacDinh = 30000m;   
-        private const decimal MienPhiShipTu = 500000m;   
 
-      
+        private const decimal PhiShipMacDinh = 30000m;
+        private const decimal MienPhiShipTu = 500000m;
+
+
         public class DongGioHang
         {
             public string maBanh { get; set; }
@@ -34,7 +34,7 @@ namespace baiTapLonBanh
             public decimal TongCong;
         }
 
-       
+
         private string MaDangDung
         {
             get { return ViewState["MaGiamGia"] as string ?? ""; }
@@ -48,21 +48,21 @@ namespace baiTapLonBanh
                 Response.Redirect("DangNhap.aspx");
                 return;
             }
-            
+
             ngayNhan.Attributes["min"] = DateTime.Today.ToString("yyyy-MM-dd");
 
             if (!IsPostBack)
             {
-                
+
                 string maBanh = Request.QueryString["maBanh"];
 
                 if (!string.IsNullOrEmpty(maBanh))
                 {
-                   
+
                     List<SanPhamBanh> danhSachSanPham =
                         Application["DanhSachSanPham"] as List<SanPhamBanh>;
 
-                    
+
                     SanPhamBanh banhDuocChon = null;
 
                     if (danhSachSanPham != null)
@@ -74,7 +74,7 @@ namespace baiTapLonBanh
 
                     if (banhDuocChon != null)
                     {
-                       
+
                         Dictionary<string, int> gioHang =
                             Session["GioHang"] as Dictionary<string, int>;
 
@@ -82,7 +82,7 @@ namespace baiTapLonBanh
                         {
                             gioHang = new Dictionary<string, int>();
                         }
-                     
+
                         string khoa = GioHangKey.Tao(maBanh, GioHangKey.LaBanhKem(banhDuocChon) ? "16" : null);
 
                         if (gioHang.ContainsKey(khoa))
@@ -96,7 +96,7 @@ namespace baiTapLonBanh
 
                         Session["GioHang"] = gioHang;
                     }
-                
+
                     Response.Redirect("DatHang.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
                     return;
@@ -108,12 +108,12 @@ namespace baiTapLonBanh
                     return;
                 }
 
-               
+
                 HienThiTomTat();
             }
         }
 
-       
+
         protected void Page_PreRender(object sender, EventArgs e)
         {
             HienThiPhuongThucThanhToan();
@@ -169,7 +169,7 @@ namespace baiTapLonBanh
 
                 SanPhamBanh b = null;
 
-              
+
                 foreach (SanPhamBanh sanPham in danhSachSanPham)
                 {
                     if (sanPham.maBanh == ma)
@@ -199,13 +199,13 @@ namespace baiTapLonBanh
             return ketQua;
         }
 
-       
+
         private TienDonHang TinhTien(
     List<DongGioHang> dong, string maGiamGia)
         {
             TienDonHang t = new TienDonHang();
 
-     
+
             decimal tamTinh = 0;
 
             foreach (DongGioHang sanPham in dong)
@@ -348,56 +348,74 @@ namespace baiTapLonBanh
                 return;
             }
 
-            List<string> loi = new List<string>();
+            // Xoa thong bao cu truoc khi kiem tra lai.
+            loiHoTen.InnerText = "";
+            loiSoDienThoai.InnerText = "";
+            loiEmail.InnerText = "";
+            loiDiaChi.InnerText = "";
+            loiNgayNhan.InnerText = "";
+            loiKhungGio.InnerText = "";
+            loiThanhToan.InnerText = "";
 
-     
+            bool hopLe = true;
+
             string hoTen = txtHoTen.Value.Trim();
             string sdt = Regex.Replace(txtSoDienThoai.Value.Trim(), @"[\s\.\-]", "");
             string email = txtEmail.Value.Trim();
             string diaChi = txtDiaChi.Value.Trim();
             string ghiChu = txtGhiChu.Value.Trim();
 
-            if (hoTen.Length < 2)
+            if (hoTen.Length < 2 || hoTen.Length > 60)
             {
-                loi.Add("Vui lòng nhập họ và tên người nhận.");
-            }
-            if (!Regex.IsMatch(sdt, @"^0\d{9}$"))
-            {
-                loi.Add("Số điện thoại phải gồm 10 chữ số và bắt đầu bằng 0.");
-            }
-            if (email.Length > 0 && !Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
-            {
-                loi.Add("Email chưa đúng định dạng.");
-            }
-            if (diaChi.Length < 8)
-            {
-                loi.Add("Vui lòng nhập địa chỉ nhận hàng đầy đủ.");
+                loiHoTen.InnerText = "Họ và tên phải có từ 2 đến 60 ký tự.";
+                hopLe = false;
             }
 
-      
+            if (!Regex.IsMatch(sdt, @"^0\d{9}$"))
+            {
+                loiSoDienThoai.InnerText = "Số điện thoại phải gồm 10 chữ số và bắt đầu bằng 0.";
+                hopLe = false;
+            }
+
+            if (email.Length > 100 ||
+                (email.Length > 0 && !Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$")))
+            {
+                loiEmail.InnerText = "Email chưa đúng định dạng.";
+                hopLe = false;
+            }
+
+            if (diaChi.Length < 8 || diaChi.Length > 200)
+            {
+                loiDiaChi.InnerText = "Địa chỉ phải có từ 8 đến 200 ký tự.";
+                hopLe = false;
+            }
+
             DateTime ngay;
             bool coNgay = DateTime.TryParseExact(ngayNhan.Value, "yyyy-MM-dd",
                 CultureInfo.InvariantCulture, DateTimeStyles.None, out ngay);
 
             if (!coNgay)
             {
-                loi.Add("Vui lòng chọn ngày nhận hàng.");
+                loiNgayNhan.InnerText = "Vui lòng chọn ngày nhận hàng.";
+                hopLe = false;
             }
             else if (ngay.Date < DateTime.Today)
             {
-                loi.Add("Ngày nhận hàng không được ở trong quá khứ.");
+                loiNgayNhan.InnerText = "Ngày nhận hàng không được ở trong quá khứ.";
+                hopLe = false;
             }
 
             int gioBatDau;
             if (!int.TryParse(ddlGio.Value, out gioBatDau))
             {
-                loi.Add("Vui lòng chọn khung giờ nhận hàng.");
+                loiKhungGio.InnerText = "Vui lòng chọn khung giờ nhận hàng.";
+                hopLe = false;
             }
             else if (coNgay && ngay.Date == DateTime.Today && gioBatDau <= DateTime.Now.Hour)
             {
-                loi.Add("Khung giờ nhận hàng đã qua, vui lòng chọn khung giờ khác.");
+                loiKhungGio.InnerText = "Khung giờ nhận hàng đã qua, vui lòng chọn khung giờ khác.";
+                hopLe = false;
             }
-
 
             string maThanhToan = Request.Form["thanhToan"] ?? "cod";
             string tenThanhToan;
@@ -408,23 +426,13 @@ namespace baiTapLonBanh
                 case "momo": tenThanhToan = "Ví MoMo"; break;
                 default:
                     tenThanhToan = "";
-                    loi.Add("Vui lòng chọn phương thức thanh toán.");
+                    loiThanhToan.InnerText = "Vui lòng chọn phương thức thanh toán hợp lệ.";
+                    hopLe = false;
                     break;
             }
 
-         
-            if (loi.Count > 0)
+            if (!hopLe)
             {
-                StringBuilder sb = new StringBuilder();
-                sb.Append("<strong><i class=\"fa-solid fa-circle-exclamation\"></i> Vui lòng kiểm tra lại:</strong><ul>");
-                foreach (string s in loi)
-                {
-                    sb.Append("<li>").Append(HttpUtility.HtmlEncode(s)).Append("</li>");
-                }
-                sb.Append("</ul>");
-
-                khungLoi.InnerHtml = sb.ToString();
-                khungLoi.Visible = true;
                 HienThiTomTat();
                 return;
             }
@@ -440,7 +448,7 @@ namespace baiTapLonBanh
             litThoiGian.InnerHtml = ngay.ToString("dd/MM/yyyy") + ", " + TenKhungGio(ddlGio.Value);
             litThanhToan.InnerHtml = tenThanhToan;
             litTongThanhToan.InnerHtml = Tien(t.TongCong);
-           
+
             List<ChiTietDon> dsChiTiet = new List<ChiTietDon>();
 
             foreach (DongGioHang sanPham in dong)
@@ -494,10 +502,10 @@ namespace baiTapLonBanh
             {
                 Application.UnLock();
             }
-        
+
             Session["DonHangGanNhat"] = maDon;
 
-            
+
             Session.Remove("GioHang");
             Session.Remove("TuyChonBanh");
             pnlDatHang.Visible = false;

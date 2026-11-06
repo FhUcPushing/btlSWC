@@ -125,5 +125,6 @@
         </footer>
     </form>
     <script src="JS/Site.js"></script>
+    <script src="JS/QuanLyNguoiDung.js"></script>
 </body>
 </html>
